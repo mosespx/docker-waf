@@ -14,7 +14,8 @@ docker_login() {
 docker_login
 
 IMG=gcr.io/px_docker_repo/pxmodsec
-BUILDTAG=$(git describe --tags --abbrev=1)
+BUILDTAG="v1.0-190-g4f91"
+#BUILDTAG=$(git describe --tags --abbrev=1)
 echo ${BUILDTAG} | tee buildtag
 title "docker build ${BUILDTAG}"
 docker build -t ${IMG} .
